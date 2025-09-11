@@ -4,7 +4,7 @@
   "description": "A SaaS React application for text-to-image generation",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "concurrently \"npm run dev --prefix server\" \"npm run start --prefix client\"",
     "dev": "nodemon server.js",
     "build": "react-scripts build",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,5 +17,8 @@
     "React"
   ],
   "author": "sandy",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
 }
