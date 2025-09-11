@@ -4,7 +4,7 @@
   "description": "A SaaS React application for text-to-image generation",
   "main": "server.js",
   "scripts": {
-    "start": "concurrently \"npm run dev --prefix server\" \"npm run start --prefix client\"",
+    "start": "concurrently \"npm run dev --prefix server\" \"npm run server --prefix client\"",
     "dev": "nodemon server.js",
     "build": "react-scripts build",
     "test": "echo \"Error: no test specified\" && exit 1"
